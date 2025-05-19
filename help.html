@@ -28,6 +28,61 @@
       <li><strong>News Column:</strong> Updated automatically using the Mediastack API. Click on any headline to read the full article in a new tab.</li>
       <li><strong>About Page:</strong> Learn why this project was created and what it hopes to accomplish.</li>
     </ul>
+
+    <!-- Submit a Resource Section -->
+    <section class="resource-box" style="margin-top: 3em; background: #f9f9f9; padding: 1.5em;">
+      <h2>Submit a Resource</h2>
+      <form id="resource-form">
+        <input type="text" id="title" placeholder="Resource Title" required />
+        <br><br>
+        <input type="url" id="url" placeholder="Resource URL" required />
+        <br><br>
+        <textarea id="description" placeholder="Why is this resource useful?" rows="3" required></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="resource-list" style="margin-top: 2em;">
+        <h3>Community-Submitted Resources</h3>
+        <ul id="resources-display"></ul>
+      </div>
+    </section>
   </div>
+
+  <script type="module">
+    import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+    const supabase = createClient(
+      "https://wxguxijjsvvtykmynhqc.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4Z3V4aWpqc3Z2dHlrbXluaHFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2MzIzMzUsImV4cCI6MjA2MzIwODMzNX0.JRZvmOqXUM4zqcZf3ZboxG492Oj7HXv73E80qoB78JY"
+    );
+
+    async function loadResources() {
+      const { data, error } = await supabase
+        .from("resources")
+        .select("*")
+        .order("timestamp", { ascending: false })
+        .limit(5);
+
+      const container = document.getElementById("resources-display");
+      if (error) return container.innerText = "Unable to load resources.";
+      container.innerHTML = data.map(r =>
+        `<li><strong><a href="${r.url}" target="_blank">${r.title}</a></strong><br>${r.description}</li>`
+      ).join("");
+    }
+
+    document.getElementById("resource-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const title = document.getElementById("title").value.trim();
+      const url = document.getElementById("url").value.trim();
+      const description = document.getElementById("description").value.trim();
+
+      const { error } = await supabase.from("resources").insert([{ title, url, description }]);
+      if (error) return alert("Failed to submit resource.");
+      e.target.reset();
+      loadResources();
+    });
+
+    loadResources();
+  </script>
 </body>
 </html>
