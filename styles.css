@@ -1,0 +1,138 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-size: 18px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 1.5em 2em;
+}
+
+.project-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5em;
+  font-size: 1.2em;
+}
+
+.main-content {
+  display: flex;
+  padding: 2em;
+}
+
+.left-column {
+  flex: 1;
+  padding-right: 2em;
+}
+
+.right-column {
+  flex: 2;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  margin-bottom: 2em;
+}
+
+.topic-button {
+  display: block;
+  padding: 0.75em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.topic-button.red { background-color: #c0392b; }
+.topic-button.green { background-color: #27ae60; }
+.topic-button.orange { background-color: #e67e22; }
+.topic-button.black { background-color: #2c3e50; }
+.topic-button.white { background-color: #ecf0f1; color: #333; }
+
+.timeline {
+  border-left: 4px solid #555;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+.timeline-event {
+  position: relative;
+  margin: 1.5em 0;
+  padding-left: 1em;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  top: 0.3em;
+  left: -1.1em;
+  width: 14px;
+  height: 14px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+.year {
+  font-weight: bold;
+  display: block;
+  color: #222;
+  margin-bottom: 0.2em;
+}
+
+.news-box {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 2em;
+}
+
+#news p {
+  margin: 0.75em 0;
+}
+
+.map-box {
+  height: 400px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.page-container {
+  padding: 3em;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 2em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.full-width-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
+iframe {
+  margin-top: 1em;
+  border-radius: 8px;
+}

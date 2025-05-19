@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palestine Beyond the Headlines</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="project-title">Palestine Beyond the Headlines</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="topics.html">Topics</a>
+        <a href="help.html">Help</a>
+      </nav>
+  </div>
+
+  <div class="main-content">
+    <aside class="left-column">
+      <h2>Learn Palestine</h2>
+        <div class="button-list">
+          <a class="topic-button red" href="settlements.html">Settlement Expansion and Land Theft</a>
+          <a class="topic-button green" href="gaza.html">Gaza Under Siege</a>
+          <a class="topic-button orange" href="westbank.html">The West Bank & Jerusalem</a>
+          <a class="topic-button black" href="prisoners.html">Palestinian Prisoners</a>
+          <a class="topic-button white" href="apartheid.html">Apartheid</a>
+        </div>
+      <h2>Key Moments and Timelines</h2>
+      <div class="timeline">
+        <div class="timeline-event"><span class="year">1948</span> Nakba: Mass displacement of Palestinians begins</div>
+        <div class="timeline-event"><span class="year">1967</span> Six-Day War and occupation of West Bank & Gaza</div>
+        <div class="timeline-event"><span class="year">1987</span> First Intifada (uprising)</div>
+        <div class="timeline-event"><span class="year">2000</span> Second Intifada begins</div>
+        <div class="timeline-event"><span class="year">2005</span> Gaza Disengagement; siege begins shortly after</div>
+        <div class="timeline-event"><span class="year">2021</span> Sheikh Jarrah evictions spark global attention</div>
+      </div>
+    </aside>
+
+    <section class="right-column">
+      <div id="news-section" class="news-box">
+        <h2>Latest News</h2>
+        <div id="news"></div>
+      </div>
+      <div id="map" class="map-box"></div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
