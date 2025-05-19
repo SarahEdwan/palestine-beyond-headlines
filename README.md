@@ -7,4 +7,4 @@
 This application is designed to work on **any web browser**.
 
 ## Developer Manual
-See the [Developer Manual](DEVELOPER_MANUAL.md) for installation, usage, API details, and future roadmap.
+See the [Developer Manual](docs/DEVELOPER_MANUAL.md) for installation, usage, API details, and future roadmap.
