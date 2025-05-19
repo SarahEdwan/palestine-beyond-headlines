@@ -12,10 +12,10 @@ This project is created to raise awareness about the ongoing situation in Palest
   - The West Bank & Jerusalem
   - Palestinian Prisoners
   - Apartheid
-- **Live News Feed**: Pulls recent headlines about Palestine from the Mediastack API.
-- **Interactive Map**: Highlights the region and provides geographic context.
-- **Help Page**: Offers a guide on how to use and navigate the platform.
-- **About Page**: Explains the purpose of the site and includes a solidarity message — *Until Liberation 🇵🇸*.
+- **Live News Feed**: Pulls recent headlines about Palestine from the Mediastack API
+- **Interactive Map**: Highlights the region and provides geographic context
+- **Help Page**: Offers a guide on how to use and navigate the platform
+- **About Page**: Explains the purpose of the site
 
 ---
 
