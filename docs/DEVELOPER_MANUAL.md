@@ -7,8 +7,8 @@
 
 Before you can run the application, ensure you have the following installed on your local machine:
 
-- **Node.js** (>= v14.0)
-- **npm** (comes with Node.js)
+- **Node.js** 
+- **npm** 
 
 ### Installing Dependencies
 
